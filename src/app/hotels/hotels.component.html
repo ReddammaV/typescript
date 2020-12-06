@@ -1,0 +1,110 @@
+<p>crudoperation works!</p>
+
+<!-- form -->
+<div class="col-md-6">
+    <!-- second type validations -->
+    <form [formGroup]="restaurantForm" (ngSubmit)="onSubmit(restaurantForm)">
+        <div class="emp-form">
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <input placeholder="Restaurant Name" class="form-control" formControlName="restarentName"
+                        [ngClass]="{ 'is-invalid': submitted && f.restarentName.errors }">
+                    <!-- validators start -->
+                    <div *ngIf="submitted && f.restarentName.errors" class="smalltext text-danger">
+                        <div *ngIf="f.restarentName.errors.required">First Name is required</div>
+                    </div>
+                    <!-- validators end -->
+                </div>
+                <div class="col-md-6 form-group">
+                    <input placeholder="Restaurent Description" class="form-control"
+                        formControlName="restarentDescription"
+                        [ngClass]="{ 'is-invalid': submitted && f.restarentDescription.errors }">
+                    <!-- validators start -->
+                    <div *ngIf="submitted && f.restarentDescription.errors" class="smalltext text-danger">
+                        <div *ngIf="f.restarentDescription.errors.required">Last Name is required</div>
+                    </div>
+                    <!-- validators end -->
+                </div>
+                <div class="col-md-6 form-group">
+                    <input placeholder="Area Location" class="form-control" formControlName="areaLocation"
+                        [ngClass]="{ 'is-invalid': submitted && f.areaLocation.errors }">
+                    <!-- validators start -->
+                    <div *ngIf="submitted && f.areaLocation.errors" class="smalltext text-danger">
+                        <div *ngIf="f.areaLocation.errors.required">Last Name is required</div>
+                    </div>
+                    <!-- validators end -->
+                </div>
+                <div class="col-md-6 form-group">
+                    <input placeholder="Timings" class="form-control" formControlName="timings"
+                        [ngClass]="{ 'is-invalid': submitted && f.timings.errors }">
+                    <!-- validators start -->
+                    <div *ngIf="submitted && f.timings.errors" class="smalltext text-danger">
+                        <div *ngIf="f.timings.errors.required">Last Name is required</div>
+                    </div>
+                    <!-- validators end -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <input placeholder="Cuisines" class="form-control" formControlName="cuisines"
+                        [ngClass]="{ 'is-invalid': submitted && f.cuisines.errors }">
+                    <!-- validators start -->
+                    <div *ngIf="submitted && f.cuisines.errors" class="smalltext text-danger">
+                        <div *ngIf="f.cuisines.errors.required">Cuisines is required</div>
+                    </div>
+                    <!-- validators end -->
+                </div>
+                <div class="col-md-6 form-group">
+                    <input placeholder="Contact Number" class="form-control" formControlName="phoneNumber"
+                        [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }">
+                    <!-- validators start -->
+                    <div *ngIf="submitted && f.phoneNumber.errors" class="smalltext text-danger">
+                        <div *ngIf="f.phoneNumber.errors.required">Contact Number is required</div>
+                    </div>
+                    <!-- validators end -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <button type="submit" class="btn btn-success btn-lg btn-block">
+                        <i class="fa fa-save"></i>
+                        {{message}}
+                    </button>
+                </div>
+                <div class="col-md-4">
+                    <button type="button" (click)="onReset()" class="btn btn-primary btn-lg btn-block">
+                        <i class="fa fa-retweet"></i>
+                        CLEAR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- form -->
+</div>
+<!-- form -->
+
+<!-- crud list -->
+<div class="col-md-6">
+    <!-- Crud list -->
+    <table class="table table-hover">
+        <tr *ngFor="let restaurant of getRestaurants">
+            <td>{{restaurant.restarentName}}</td>
+            <td>{{restaurant.restarentDescription}}</td>
+            <td>{{restaurant.areaLocation}}</td>
+            <td>{{restaurant.timings}}</td>
+            <td>{{restaurant.cuisines}}</td>
+            <td>{{restaurant.phoneNumber}}</td>
+            <td>
+                <a class="btn" (click)="editRestaurant(restaurant._id)">
+                    <i class="fa fa-edit"></i>
+                </a>
+            </td>
+            <td>
+                <a class="btn text-danger" (click)="deleteRestaurant(restaurant._id)">
+                    <i class="fa fa-trash"></i>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>

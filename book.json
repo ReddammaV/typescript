@@ -1,0 +1,34 @@
+{
+  "Book": [
+    {
+      "id": 101,
+      "name": "Angular 8",
+      "category": "Angular Book"
+    },
+    {
+      "id": 102,
+      "name": "Native React js",
+      "category": "Native React js Book"
+    },
+    {
+      "id": 103,
+      "name": "PHP",
+      "category": "PHP Book"
+    },
+    {
+      "id": 105,
+      "name": "Node js",
+      "category": "Node js Book"
+    },
+    {
+      "id": 106,
+      "name": "Angular 8",
+      "category": "Angular Book"
+    },
+    {
+      "id": 107,
+      "name": "Java",
+      "category": "Java Book"
+    }
+  ]
+}

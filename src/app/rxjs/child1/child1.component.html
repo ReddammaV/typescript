@@ -1,0 +1,9 @@
+<div class="box">
+    Child1 Component <br />
+    Employee Name : {{empName}}
+    <br />
+    <br />
+
+    <input type="text" placeholder="Update Employee Name" #empname />
+    <button (click)="updateEmployeeName(empname.value)">Update</button>
+</div>

@@ -1,0 +1,32 @@
+{
+    "data":[
+       {
+          "bookingAllowed":"true",
+          "isDeleted":false,
+          "_id":"5e85566d0767f719847dfaa7",
+          "restarentName":"abc",
+          "restarentDescription":"kjiiji",
+          "areaLocation":"bangalore",
+          "timings":"8 to 8",
+          "cuisines":"jhhjhjh",
+          "phoneNumber":9876543212,
+          "createdAt":"2020-04-02T03:05:17.847Z",
+          "updatedAt":"2020-04-02T03:05:17.847Z",
+          "__v":0
+       },
+       {
+          "bookingAllowed":"true",
+          "isDeleted":false,
+          "_id":"5e8556d60767f719847dfaa8",
+          "restarentName":"taj hotel",
+          "restarentDescription":"ikjuhh",
+          "areaLocation":"tirupathi",
+          "timings":"8 to 10",
+          "cuisines":"jhhjhjskdkajsdjh",
+          "phoneNumber":8765345672,
+          "createdAt":"2020-04-02T03:07:02.749Z",
+          "updatedAt":"2020-04-02T03:07:02.749Z",
+          "__v":0
+       }
+    ]
+ }

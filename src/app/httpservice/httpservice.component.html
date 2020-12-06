@@ -1,0 +1,17 @@
+<p>httpservice works!</p>
+
+<button type="button" (click)="callService()" >call my service</button>
+<button type="button" (click)="callOtherService()" >call other service</button>
+Message : {{msg}}
+
+<h2>List</h2>
+<input type="text" [(ngModel)]="value" />
+
+<input type="button" (click)="addNumber(value)" value="Add"/>
+
+
+<br/>
+
+<div *ngFor="let item of allNum">
+    {{item}}
+</div>

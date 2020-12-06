@@ -1,0 +1,65 @@
+<p>gethttp works!</p>
+<h2>Requesting Json Data Using httpClient.get() with subscribe</h2>
+
+<ul>
+  <li *ngFor="let book of allBooks">
+    Id : {{book.id}} | Name : {{book.name}} | Category : {{book.category}}
+  </li>
+</ul>
+
+<h2>Requesting Json Data Using httpClient.get() with async</h2>
+
+<ul>
+  <li *ngFor="let book of allBooksAsync | async">
+    Id : {{book.id}} | Name : {{book.name}} | Category : {{book.category}}
+  </li>
+</ul>
+
+<div>
+  <button class="btn btn-primary mr-2" type="button" (click)="AddBook()">Add New Book</button> |
+  <button class="btn btn-info mr-2" type="button" (click)="UpdateMyBook()">Update Book</button> |
+  <button class="btn btn-danger" type="button" (click)="DeleteBook()">Delete Book</button>
+</div>
+<!-- filter -->
+
+<h2>Filter data using Json Data Using httpClient.get() with subscribe</h2>
+
+<ul>
+  <li *ngFor="let book of filterBook">
+    Id : {{book.id}} | Name : {{book.name}} | Category : {{book.category}}
+  </li>
+</ul>
+
+
+<h2>Filter data using Json Data Using httpClient.get() with Async</h2>
+
+<ul>
+  <li *ngFor="let book of filterBookAsync | async">
+    Id : {{book.id}} | Name : {{book.name}} | Category : {{book.category}}
+  </li>
+</ul>
+
+<!-- params -->
+<!-- filter 2 -->
+<h2>Filter data using Json Data Using httpHeaders and HttpParams with subscribe</h2>
+<ul>
+  <li *ngFor="let book of filterBook2">
+    Id : {{book.id}} | Name : {{book.name}} | Category : {{book.category}}
+  </li>
+</ul>
+
+<h2>Filter data using Json Data Using httpHeaders and HttpParams with Async</h2>
+
+<ul>
+  <li *ngFor="let book of filterBookAsync2 | async">
+    Id : {{book.id}} | Name : {{book.name}} | Category : {{book.category}}
+  </li>
+</ul>
+
+<!-- observe -->
+<h2>Filter data using Json Data Using HttpClient.get with observe Property with subscribe</h2>
+<ul>
+  <li *ngFor="let book of filterBook3">
+    Id : {{book.id}} | Name : {{book.name}} | Category : {{book.category}}
+  </li>
+</ul>
