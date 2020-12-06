@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RxjsService } from 'src/app/services/rxjs.service';
+import { RxjsService } from '../../../app/services/rxjs.service';
 
 @Component({
   selector: 'app-child1',
